@@ -1,25 +1,7 @@
-# Carpenter Starter App
+# carpenter-blog
 
-Starer [Carpenter](https://github.com/arthur-xavier/purescript-carpenter) application, based on the [TodoMVC example](https://github.com/arthur-xavier/purescript-carpenter-todomvc).
+Just a basic project to test how Carpenter works.
 
-## Learning Carpenter
-- [Documentation](http://pursuit.purescript.org/packages/purescript-carpenter)
-- [Examples] (https://github.com/arthur-xavier/purescript-carpenter/tree/master/examples)
-- [Documentation for purescript-react](http://pursuit.purescript.org/packages/purescript-react)
+It's a simplified blog structure, with ajax calls and basic CRUD operations.
 
-## Running
-To install and run this application one must only install the dependencies and run the Webpack development server:
-
-```bash
-npm install
-npm start
-```
-
-If you want to compile the application source to distribution files in the `dist` folder, simply run:
-
-```bash
-npm run build
-```
-
-## Credit
-Based on the TodoMVC application created by [@arthur-xavier](https://github.com/arthur-xavier).
+There's a version written using Pux [here](https://github.com/dariooddenino/pux-blog)
