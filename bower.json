@@ -14,13 +14,14 @@
   },
   "dependencies": {
     "purescript-carpenter": "^2.2.0",
-    "purescript-carpenter-router": "^1.0.0"
+    "purescript-react-router": "^0.2.1"
   },
   "resolutions": {
     "purescript-dom": "^2.0.0",
     "purescript-js-date": "^2.0.0"
   },
   "devDependencies": {
-    "purescript-test-unit": "^9.1.0"
+    "purescript-test-unit": "^9.1.0",
+    "purescript-psci-support": "^1.0.0"
   }
 }
