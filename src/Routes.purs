@@ -1,7 +1,6 @@
 module App.Routes where
 
 import Data.Functor ((<$))
-import Data.Maybe (fromMaybe)
 import Prelude (($), (<$>), Unit)
 import Control.Alt ((<|>))
 import Control.Apply ((<*), (*>), (<*>))
@@ -26,6 +25,6 @@ int = floor <$> num
 
 routes :: Match Route
 routes
-    = Home <$ oneSlash
-  <|> Posts View <$> (homeSlash *> lit "posts" *> int)
+    = Home <$ homeSlash
   <|> Posts Edit <$> (homeSlash *> lit "posts" *> int <* lit "edit")
+  <|> Posts View <$> (homeSlash *> lit "posts" *> int)

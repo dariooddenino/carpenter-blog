@@ -22,6 +22,7 @@
   },
   "devDependencies": {
     "purescript-test-unit": "^9.1.0",
-    "purescript-psci-support": "^1.0.0"
+    "purescript-psci-support": "^1.0.0",
+    "purescript-debug": "^1.0.0"
   }
 }

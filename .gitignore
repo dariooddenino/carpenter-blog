@@ -11,3 +11,5 @@ output
 npm-debug.log*
 
 dist
+
+.tix
