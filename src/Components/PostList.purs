@@ -57,5 +57,4 @@ update yield dispatch action _ _ =
 --     , ol' $ map postView state.posts
 --     ]
 
--- postView :: forall props. ReactClass props
--- postView
+-- postView :: Dispatcher Action -> Post -> ReactElement
