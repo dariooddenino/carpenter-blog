@@ -3,8 +3,7 @@ module Components.Container where
 import Prelude
 import Carpenter (spec, Render, Update)
 import React (createClass, ReactClass)
-import React.DOM (text, button, h1', div', p')
-import React.DOM.Props (onClick)
+import React.DOM (text, h1', div', p')
 import React.Router.History (historyRouter, link)
 import App.Routes (Route(..), Act(..), routes)
 import Debug.Trace (trace)
@@ -24,7 +23,7 @@ update :: forall props eff. Update State props Action eff
 update yield _ action _ _ =
   case action of
     PageView r -> do
-      trace "PageView" \_ ->
+      trace (show r) \_ ->
       yield $ _ { route = r }
 
 render :: forall props. Render State props Action
@@ -33,7 +32,7 @@ render dispatch _ state _ =
     [ historyRouter (dispatch <<< PageView) routes
     , h1' [ link "/" [] [ text "Carpenter Blog" ]]
     , h1' [ link "/posts/1" [] [ text "Post 1" ]]
-    , case state.route of
+    , trace (show state.route) \_ -> case state.route of
                Home -> p' [ text "Home" ]
                Posts View x -> p' [ text $ "View " <> show x ]
                Posts Edit x -> p' [ text $ "Edit " <> show x ]
